@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexrender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Music visualiser</h1>
+
+        <form method="POST" action="http://localhost:3500/" id="formulier">
+
+            <label>Titel en artist</label>
+            <div class="form-group">
+                <input class="form-control" name="titel" placeholder="Titel" required>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" name="artist" placeholder="Artist" required>
+            </div>
+
+            <label>Lengte van de video</label>
+            <div class="form-group">
+                <input class="form-control" name="minuut" placeholder="Aantal minuten" required>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" name="seconde" placeholder="Aantal seconden" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Verzenden</button>
+        </form>
+
+        <p id="show">informatie laden</p>
+    </div>
+
+    <script>
+        async function toonCurrent(url) {
+            const response = await fetch(url);
+            var data = await response.json();
+            console.log(data);
+            var lastItem = Object.keys(data).length - 1;
+            document.getElementById("show").innerHTML =
+                `${data[lastItem].titel} - ${data[lastItem].artist} | lengte: ${data[lastItem].minuut}min ${data[lastItem].seconde}sec `;
+        };
+        toonCurrent("http://localhost:3500/");
+    </script>
+</body>
+
+</html>

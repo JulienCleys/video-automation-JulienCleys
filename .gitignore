@@ -1,0 +1,9 @@
+node_modules
+package-lock.json
+
+# maakt toch een map temp aan dus moet niet mee
+temp
+
+# verstuur alleen een lege results folder
+results/*
+!results/.gitkeep

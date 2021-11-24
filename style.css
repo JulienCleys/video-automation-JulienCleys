@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+body,
+input,
+button {
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+    color: #D9DADE;
+}
+
+body {
+    /* background: #D9DADE; */
+    background: #2C3230;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.5em;
+    color: #BC0100;
+}
+
+#formulier,
+.form-group {
+    margin: 15px 0;
+}
+
+#formulier {
+    width: 50%;
+    font-size: 2em;
+    text-align: center;
+}
+
+input {
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    /* border-radius: 5px; */
+    border: solid 1px #D9DADE;
+    /* background: black; */
+    /* color: white; */
+    font-size: .5em;
+    padding: 5px 0;
+    transition: .2s;
+    color: #BC0100;
+    background-color: transparent;
+}
+
+input:focus {
+    /* padding: 7px 2px; */
+    background-color: #BC0100;
+    color: #D9DADE;
+}
+
+::placeholder {
+    color: #D9DADE;
+}
+
+
+button {
+    background: transparent;
+    border: solid 1px #D9DADE;
+    padding: 15px;
+    transition: .2s;
+    font-size: .5em;
+}
+
+button:hover {
+    color: #D9DADE;
+    border-radius: 15px;
+    font-size: .6em;
+    background-color: #BC0100;
+    padding: 17px;
+    cursor: pointer;
+}
+
+#show {
+    margin: 0;
+    font-size: 2em;
+    /* color: #BC0100; */
+
+}
